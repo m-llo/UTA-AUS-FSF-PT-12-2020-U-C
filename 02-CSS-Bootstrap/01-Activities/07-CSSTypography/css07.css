@@ -1,0 +1,31 @@
+body {
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+p {
+    line-height: 2;
+}
+}
+h1,h3 {
+    font-style:bold;
+    color:red;
+    font-family:"creepster";
+}
+h4 {
+    font-weight:bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.major, ul {
+
+    font-weight: bold;
+    font-style: italic;
+    line-height: 2;
+    color: rgb(185, 4, 4);
+    font-family: "black ops one";
+}
+.huge, h4 {
+letter-spacing:2pt;
+line-height: 2;
+font-family: "dancing script";
