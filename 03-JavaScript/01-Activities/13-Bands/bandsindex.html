@@ -9,30 +9,26 @@
 
     <script type="text/javascript">
 
-        var bands = ["The Clipse", "Outkast", "The Roots", "The Free Nationals", "The Internet"];
+        var bands = ["the clipse", "outkast", "the roots", "the free nationals", "The Internet"];
 
 
         var favBand = prompt("What's your favorite band?");
+
+        var favBandLower = favBand.toLowerCase();
        
-        if (favBand.indexOf(bands)) {
-            alert("YEAH THEY'RE PRETTY COOL!")
+        if (bands.indexOf(favBandLower) === -1) {
+            alert("Nah. They're pretty lame.")
 
         }
         else {
-            alert("Nah. They're pretty lame.")
+            alert("Yeah! They're pretty dope!")
         }
 
         console.log(bands.indexOf("The Clipse"));
         console.log(bands.indexOf("The Internet"));
         console.log(bands);
         
-        // if favBand [bands.indexOf] { 
-        //     alert("YEAH I LOVE THEM!")
-        // } 
-        // else {
-        //     alert("Nah. They're pretty lame.")
-        // }
-
+        
 
 
 

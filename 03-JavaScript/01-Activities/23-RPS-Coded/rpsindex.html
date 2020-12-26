@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+  </head>
+
+  <body>
+<script>
+// declae rps
+// prompt user for input 
+//check user input
+
+
+var computerChoices = ["r", "p", "s"]
+var wins = 0;
+var losses = 0;
+var ties = 0;
+
+for (var i = 0; i <= 10; i++) {
+
+var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)]
+console.log(computerGuess)
+var userGuess = prompt("Enter 'r', 'p', or 's' to play!")
+if (computerChoices.indexOf(userGuessLower) === -1) {
+      losses++
+      alert("Please choose 'r', 'p', or 's'")}
+
+var userGuessLower = userGuess.toLowerCase()
+
+if (userGuess ==="r" || userGuess ==="p" || userGuess ==="s") {
+  alert("The computer chose " + computerGuess);
+
+
+if ((userGuess === "r" && computerGuess === "s") || (userGuess === "s" && computerGuess === "p")
+ || (userGuess === "p" && computerGuess === "r")) {
+  wins++;
+  alert("You've Won" + wins + " times!")
+ }
+ 
+ else if (userGuess === computerGuess) {
+  ties++;
+  alert("You've tied " + ties + " times!")
+ }
+
+else {
+  losses++;
+  alert("You've Lost" + losses + " times!")
+}
+
+}
+alert ("totals " + "W" + wins + " L" + losses + " T" + ties)
+}
+
+    
+</script>
+
+
+
+
+  </body>
