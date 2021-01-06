@@ -21,19 +21,22 @@ for (var i = 0; i <= 10; i++) {
 
 var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)]
 console.log(computerGuess)
-var userGuess = prompt("Enter 'r', 'p', or 's' to play!")
-if (computerChoices.indexOf(userGuessLower) === -1) {
+var userGuess = prompt("Enter 'r', 'p', or 's' to play!");
+userGuess = userGuess.toLowerCase();
+
+
+if (computerChoices.includes(userGuess) === false) {
       losses++
       alert("Please choose 'r', 'p', or 's'")}
 
-var userGuessLower = userGuess.toLowerCase()
 
 if (userGuess ==="r" || userGuess ==="p" || userGuess ==="s") {
   alert("The computer chose " + computerGuess);
 
 
-if ((userGuess === "r" && computerGuess === "s") || (userGuess === "s" && computerGuess === "p")
- || (userGuess === "p" && computerGuess === "r")) {
+if ((userGuess === "r" && computerGuess === "s") ||
+   (userGuess === "s" && computerGuess === "p") || 
+   (userGuess === "p" && computerGuess === "r")) {
   wins++;
   alert("You've Won" + wins + " times!")
  }
@@ -49,7 +52,9 @@ else {
 }
 
 }
-alert ("totals " + "W" + wins + " L" + losses + " T" + ties)
+alert ("Total wins: " + wins +
+ "\nTotal losses: " + losses + 
+ "\nTotal ties: " + ties)
 }
 
     
