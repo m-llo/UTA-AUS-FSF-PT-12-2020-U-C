@@ -16,7 +16,7 @@ function setTime() {
       // Stops execution of action at set interval
       clearInterval(timerInterval);
       // Calls function to create and append image
-      sendMessage();
+      // sendMessage();
     }
 
   }, 1000);
