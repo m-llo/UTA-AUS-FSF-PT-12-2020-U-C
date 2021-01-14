@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Add in the missing code such that clicking any of the sandwiches causes…  -->
+<!-- 1. An alert message to popup saying something snarky about the sandwich type.
+
+  2. A second alert message that displays to the user how many of that specific sandwich they've eaten.
+
+  3. **HINT:** You will need counter variables.
+
+* **BONUS:** Add an image to the `image-div` on the click event. -->
 
 <head>
   <meta charset="UTF-8">
@@ -31,8 +39,10 @@
       // ====================================================================
       // Here we create variables for tracking the number of sandwiches eaten
       // ...
-
-
+        var pbjEaten = 0;
+        var gcEaten = 0;
+        var rbEaten = 0;
+     
       // ...
 
       // FUNCTIONS
@@ -40,6 +50,21 @@
       // Here we create various on "click" functions which capture the clicks
       // Inside each click event is the code to create an alert, update the counter, then show the updated count.
       // ...
+      $("#pbj").on("click", function() {
+        alert("Classic!");
+        pbjEaten++;
+        alert("You've Eaten " + pbjEaten +" sandwiches")
+      } );
+      $("#grilledcheese").on("click", function() {
+        alert("ahhh creamy!");
+        gcEaten++;
+        alert("You've Eaten " + gcEaten + "sandwiches")
+      } );
+      $("#roastbeef").on("click", function() {
+        alert("gotta have the protein!");
+        rbEaten++;
+        alert("You've Eaten " + rbEaten + "sandwiches")
+      } );
 
 
       // ...

@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Using the [number-checker.html](Unsolved/number-checker.html) as a starting point, add code so that: -->
+
+  <!-- * A computer picks a random number between 1 and 4.
+
+  * Users then “click” the buttons numbered 1 – 4.
+
+  * If the user’s number matches the computer’s number, display text informing them that they've won in the "Result" Card. Otherwise, display text informing them that they've lost. -->
 
 <head>
   <meta charset="UTF-8">
@@ -63,9 +70,23 @@
           $(document).ready(function() {
 
             // Here we create the on click event that gets the user's pick
-            $(".btn-choice").on("click", function() {
+          //  var computerChoice = Math.floor(Math.random()*4) + 1;
+          //  console.log(computerChoice);
 
+            $(".btn-choice").on("click", function() {
+              var computerChoice = Math.floor(Math.random()*4) + 1;
+              console.log(computerChoice);
+              var choiceValue = $(this).val();
+              console.log("");
+              console.log(choiceValue);
               console.log("You clicked a button!!");
+
+              if (choiceValue === computerChoice) {
+                $("#result").text ="Correct!";
+
+              } else{
+                $("#result").text = "Incorrect!";
+              }
 
               // Add code to have the computer guess a random number between 1 and 4
               // Then determine which button was clicked

@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Using the code from the previous random number generator as a starting point, create a lottery generator.
 
-<head>
+  * In our case, the lottery number generator should pick 9 random numbers between 0-9 and output as one number. As an example: 886563264.
+
+  * Display this number in the random-number div.
+
+  * Then when a user clicks again, have the code create a new row with the latest number at the top.
+
+<head> -->
   <meta charset="UTF-8">
   <title>Lottery Generator</title>
 
@@ -22,7 +29,7 @@
 
       <!-- Here we have our button with id random-button -->
       <button id="random-button" class="btn btn-primary btn-lg">
-        <h1>?</h1>
+        <h1 id="lottery-number">?</h1>
       </button>
 
     </div>
@@ -35,8 +42,18 @@
   <script type="text/javascript">
     $(document).ready(function () {
 
-      //jquery code here
 
+      $("#random-button").on("click", function(){
+       for (var i = 0;  i<=9;  i++) {
+       var randomNumber =  Math.floor(Math.random()*1000000000) + 1;
+       $("#random-number").text(randomNumber);
+       console.log(randomNumber)
+      $("#random-number").prepend("<br><hr>");
+    }
+    });
+
+
+   
     });
   </script>
 
