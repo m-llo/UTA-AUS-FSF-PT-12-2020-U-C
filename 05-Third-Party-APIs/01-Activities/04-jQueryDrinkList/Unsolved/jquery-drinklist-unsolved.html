@@ -30,16 +30,20 @@
 
     // Using JavaScript programmatically append each drinkList item to the "drink-options" div
     // HINT: you will need a for loop to go over each element in the list
-    var drinkOptionsEl= $("#drink-options");
+    // var drinkOptionsEl= $("#drink-options");
 
-    for (var i=0; i<drinkList.length;i++){
-      var ele = $('<div>');
-      // append.drinkList[i]
-      ele.text(drinkList[i]);
-      drinkOptionsEl.append(ele)
-    }
+    // for (var i=0; i<drinkList.length;i++){
+    //   var ele = $('<div>');
+    //   ele.text(drinkList[i]);
+    //   drinkOptionsEl.append(ele)
+    // }
     
+      for (var i = 0; i < drinkList.length; i++){
+        var element = $('<div>');
+          element.text(drinkList[i]);
+          $("#drink-options").append(element)
 
+      }
 
 
   </script>
