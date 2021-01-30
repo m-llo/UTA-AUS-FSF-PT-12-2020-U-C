@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library of Congress Search</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 
+    crossorigin="anonymous"></script>
+  </head>
+  <body class="min-100-vh flex-column">
+    <header class="p-5 text-center text-white bg-primary">
+      <h1>Welcome to the Library of Congress</h1>
+    </header>
+    <main class="flex-row justify-center align-center col-auto p-4 bg-light">
+      <section class="card card-rounded col-7 bg-white">
+            <header class="card-header text-center">
+                <h2 class="text-white">
+                    Library of Congress Search Engine
+                </h2>
+            </header>
+            <div class="input-group mb-3 text-center pt-4">
+                <input type="text" class="form-control col-6" placeholder="Search!" aria-label="search parameters" aria-describedby="button-addon2"></input>
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+            </div> 
+            <div class="list-group col-12">
+                <button type="button" class="list-group-item list-group-item-action active" id="maps">Maps</button>
+                <button type="button" class="list-group-item list-group-item-action active" id="audio">Audio recordings</button>
+                <button type="button" class="list-group-item list-group-item-action active" id="photo">Photo, Pring, Drawing</button>
+                <button type="button" class="list-group-item list-group-item-action active" id="manuscripts">Manuscripts/Mixed materials</button>
+                <button type="button" class="list-group-item list-group-item-action active" id="newspapers">Newspapers</button>
+                <button type="button" class="list-group-item list-group-item-action active" id="film-and-video">Film, Videos</button>
+                <button type="button" class="list-group-item list-group-item-action active" id="notated-music">Printed music, such as sheet music</button>
+                <button type="button" class="list-group-item list-group-item-action active" id="websites">Websites</button>
+              </div>
+      </section>
+      <script src="./assets/script.js"></script>
+    </main>
+  </body>
+</html>
