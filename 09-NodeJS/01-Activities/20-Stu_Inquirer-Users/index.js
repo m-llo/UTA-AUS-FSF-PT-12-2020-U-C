@@ -20,8 +20,15 @@ inquirer
     },
   ])
   .then((response) =>{
-  const filename = `${response.username.toLowerCase().split(' ').join(' ')}.json`;
-  fs.appendFile(filename, `${response.username}\n${response.language}\n${response.method}\n`, (err) =>
+  const filename = `${response.username.toLowerCase().split(' ').join('_')}.json`;
+  console.log(response.username.toLowerCase().split(' '));
+  const data ={
+      name: response.username,
+      language: response.language,
+      method: response.method,
+  };
+//  to update a JSON file fs.readFile(get old data, JSON.parse, check to see if it's an array, then push to the array
+  fs.appendFile(filename, JSON.stringify(data), (err) =>
   
     err ? console.error(err) : console.log('Commit logged!')
   );
