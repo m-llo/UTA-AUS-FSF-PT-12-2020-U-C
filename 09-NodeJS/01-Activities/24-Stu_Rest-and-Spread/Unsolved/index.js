@@ -1,10 +1,10 @@
 // Exercise 1
 const songs = ['Creep', 'Everlong', 'Bulls On Parade', 'Song 2', 'What I Got'];
 
-// TODO: Which operator is being used here?
+// TODO: Which operator is being used here? spread
 const newSongs = [...songs];
 
-// TODO: What do you expect to be logged in the console?
+// TODO: What do you expect to be logged in the console? A new array of songs
 console.log(newSongs);
 
 // Exercise 2

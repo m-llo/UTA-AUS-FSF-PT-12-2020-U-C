@@ -26,4 +26,13 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
 ---
 
+
+Header tag
+  css link
+body tag
+script tag link rel 
+
+require inquirer
+require fs
+
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
