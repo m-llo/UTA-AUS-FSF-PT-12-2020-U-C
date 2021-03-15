@@ -103,3 +103,4 @@ If you haven't run into any errors at this point, you should be able to proceed 
   * This should print all the logs produced by both Heroku and your application before the deployment failed. 
   
   * Look for the first indication of an error in the logs. If the error message isn't clear, search on Google or ask the Instructional Staff for help.
+ 
