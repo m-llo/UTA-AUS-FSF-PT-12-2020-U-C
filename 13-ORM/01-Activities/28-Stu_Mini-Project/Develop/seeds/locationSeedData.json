@@ -1,0 +1,24 @@
+[
+  {
+    "location_name": "London"
+  },
+  {
+    "location_name": "Paris"
+  },
+  {
+    "location_name": "Pismo Beach"
+  },
+  {
+    "location_name": "Miami"
+  },
+  {
+    "location_name": "Austin"
+  }
+]
+
+/*config folder with connection info
+server.js with server set up
+routes folder with API rounts
+Database schema and loaded to workbench
+models fro travler, trips, location extending model using sequalize
+download sequlize, express, bcrypt, dotenv
