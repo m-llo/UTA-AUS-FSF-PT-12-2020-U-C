@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
     });
     // We use map() to iterate over dishData and then add .get({ plain: true }) each object to serialize it. 
     const dishes = dishData.map((dish) => dish.get({ plain: true }));
+    console.log(dishes)
     // We render the template, 'all', passing in dishes, a new array of serialized objects.
     res.render('all', { dishes });
     });
