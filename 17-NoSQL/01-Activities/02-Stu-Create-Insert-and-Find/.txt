@@ -1,0 +1,18 @@
+db.places.insert({"continent": "North America", "country":"Mexico", "majorcities": [Mexico City", "Juarez", "Tijuana"]})
+
+db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]})
+
+
+
+db.students.insert({
+    "name": "Manny",
+    "rownumber": 3,
+    "os": "Mac",
+    "hobbies": ["Music", "coding"]
+})
+
+> db.animals.insert({"name": "Fred", "numlegs": 7, "class": "mammal", "weight": 200})
+ db.animals.insert({"name": "Bob", "numlegs": 3, "class": "fish", "weight": 100})
+  db.animals.insert({"name": "Larry", "numlegs": 4, "class": "mammal", "weight": 50})
+   db.animals.insert({"name": "Harry", "numlegs": 0, "class": "reptile", "weight": 60})
+    db.animals.insert({"name": "Sue", "numlegs": 2, "class": "mammal", "weight": 200})
