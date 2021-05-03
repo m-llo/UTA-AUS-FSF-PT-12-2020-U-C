@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Making An IndexedDB Connection</title>
+</head>
+
+<body>
+  <h1>Open Your Developer Tools > Application > IndexedDB</h1>
+</body>
+</html>
+<script>
+  const request = indexedDB.open("databaseOne", 1)
+// CODE HERE
+request.onsuccess = event =>{
+console.log(request.result.name)
+console.log(request.result)
+
+}
+</script>

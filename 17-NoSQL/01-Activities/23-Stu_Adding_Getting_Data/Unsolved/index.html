@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Adding and Getting Data</title>
+  </head>
+
+  <body>
+    <h1>Open Your Developer Tools > Application > IndexedDB</h1>
+    <script>
+      const request = indexedDB.open("toDoListDb", 1);
+      
+      request.onupgradeneeded = event => {
+        const db = event.target.result;
+        const toDoListStore = db.createObjectStore("toDoListStore", {keyPath: "listId"})
+        toDoListStore.createIndex("dueDates", "dueDate")
+        toDoListStore.createIndex("status", "status")
+      }
+
+      
+
+      
+      request.onsuccess = () => {
+        const db = request.result;
+        const transaction = db.transaction(["toDoListStore"], "readwrite");
+        const toDoListStore = transaction.objectStore("toDoListStore");
+        const statusIndex = toDoListStore.index("status");
+        const dueDateIndex = toDoListStore.index("dueDates")
+        // CODE HERE
+     
+
+
+        toDoListStore.add({listId: "1", dueDate: "05/02/2021", status: "in-progress"});
+        toDoListStore.add({listId: "2", dueDate: "05/02/2021", status: "complete"});
+        toDoListStore.add({listId: "3", dueDate: "05/09/2021", status: "not-started"});
+        toDoListStore.add({listId: "4", dueDate: "05/09/2021", status: "not-started"});
+        toDoListStore.add({listId: "5", dueDate: "05/14/2021", status: "in-progress"});
+
+
+        const getRequest = toDoListStore.get("1")
+        getRequest.onsuccess = () => {
+          console.log(getRequest.result);
+        };
+
+        const getRequestStatus = statusIndex.getAll("complete");
+        getRequestStatus.onsuccess = () => {
+          console.log(getRequestStatus.result); 
+        }; 
+
+        const getRequestDate = dueDateIndex.getAll("05/02/2021");
+        getRequestDate.onsuccess = () => {
+          console.log(getRequestDate.result); 
+        }; 
+      };
+
+    </script>
+  </body>
+</html>
